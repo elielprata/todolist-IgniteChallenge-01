@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import { styles } from "./styles";
-import { Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons as Feather } from "@expo/vector-icons";
 import { Counter } from "../../components/Counter";
 import { Task } from "../../components/Task";
 import { useState } from "react";
@@ -128,6 +128,23 @@ export const Home = () => {
               />
             ))}
           </ScrollView>
+
+          {tasks.length === 0 && (
+            <View style={styles.empty}>
+              <Feather
+                name="clipboard-text"
+                color="#333333"
+                size={50}
+                style={{ marginBottom: 20 }}
+              />
+              <Text style={{ ...styles.emptyText, fontWeight: "bold" }}>
+                Você ainda não tem tarefas cadastradas
+              </Text>
+              <Text style={styles.emptyText}>
+                Crie tarefas e organize seus itens a fazer
+              </Text>
+            </View>
+          )}
         </View>
       </View>
     </>

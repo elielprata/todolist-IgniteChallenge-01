@@ -53,4 +53,14 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   listTasks: {},
+  empty: {
+    paddingVertical: 30,
+    alignItems: "center",
+    borderTopColor: "#333333",
+    borderTopWidth: 1,
+  },
+  emptyText: {
+    color: "#808080",
+    fontSize: 16,
+  },
 });
